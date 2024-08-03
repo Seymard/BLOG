@@ -77,3 +77,20 @@ console.log(registerUser("alice", "pa$$w0rd")); // Регистрация пол
 console.log(registerUser("bob", "123456")); // Регистрация пользователя "bob"
 console.log(loginUser("alice", "pa$$w0rd")); // Вход пользователя "alice", успешный
 console.log(loginUser("eve", "password123")); // Вход пользователя "eve", неуспешный
+functioncreatePost(title, content) {
+  // Создаем элементы для заголовка и контента поста
+var postTitle = document.createElement('h1');
+  postTitle.textContent = title;
+
+  var postContent = document.createElement('p');
+  postContent.textContent = content;
+
+  // Создаем элемент <article> для поста
+  var article = document.createElement('article');
+  article.appendChild(postTitle);
+  article.appendChild(postContent);
+
+  // Добавляем пост в HTML-разметку
+  var postContainer = document.getElementById('post-container');
+  postContainer.appendChild(article);
+}
