@@ -40,18 +40,18 @@
 </body>
 </html>
 # BLOG
-// Объект для хранения пользователей
+
 constusers = [];
 
-// Функция регистрации пользователя
+
 functionregisterUser(username, password) {
-  // Проверяем, есть ли уже пользователь с таким именем
+
 const existingUser = users.find(user => user.username === username);
   if (existingUser) {
     return "Username is already taken. Pleasechooseanotherusername";
   }
 
-  // Создаем нового пользователя и добавляем в список
+
 const newUser = {
     username: username,
     password: password
@@ -61,9 +61,9 @@ const newUser = {
   return "Registration successful! You can now log in";
 }
 
-// Функция входа пользователя
+
 function loginUser(username, password) {
-// Проверяем, существует ли пользователь с заданными именем и паролем
+
 const user = users.find(user => user.username === username && user.password === password);
   if (user) {
     return "Login successful! Welcome back!";
@@ -72,7 +72,7 @@ const user = users.find(user => user.username === username && user.password === 
   return "Invalid username or password. Pleasetryagain";
 }
 
-// Пример использования функций
+
 console.log(registerUser("alice", "pa$$w0rd")); // Регистрация пользователя "alice"
 console.log(registerUser("bob", "123456")); // Регистрация пользователя "bob"
 console.log(loginUser("alice", "pa$$w0rd")); // Вход пользователя "alice", успешный
